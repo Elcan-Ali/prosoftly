@@ -90,8 +90,9 @@
         "budge": "Your estimated budget",
         "project-description": "Description of your project",
         "send": "Send",
-        "comments":"Comments",
-        "news":"News",
-        "language-selection":"Language selection"
+        "comments": "Comments",
+        "news": "News",
+        "language-selection": "Language selection",
+        "not-teammate": "Information about our team members has not been added yet..."
     }
 }
