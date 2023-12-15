@@ -5,8 +5,8 @@ import { generatePath } from '../../utils/generatePath'
 import { useTranslation } from 'react-i18next';
 
 
-function ProjectItem({ project_name, project_titleImg, projects_lang, media, project_category_id }) {
-    console.log(media);
+function ProjectItem({ project_name, project_titleImg, projects_lang,  project_category_id }) {
+    
     const { t, i18n } = useTranslation()
     return (
         <div className='hover:-translate-y-[10px] transition-all'>
