@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import { generatePath } from '../../utils/generatePath'
 
 
-function ProjectItem({ project_name, project_titleImg, projects_lang ,media,project_category_id}) {
-    console.log(media);
+function ProjectItem({ project_name, project_titleImg, projects_lang ,project_category_id}) {
+  
     return (
         <Link data-aos="fade-up" to={`/project/${project_category_id}/${generatePath(project_name)}`} className='flex flex-wrap py-[50px]'>
             <div className='w-full lg:w-1/2 xl:w-7/12 2xl:w-2/3'>
