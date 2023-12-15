@@ -25,6 +25,7 @@ function VacancyDetailContainer() {
     (async () => {
 
       const data = await getData(`/vacancies`)
+      
       const setdata = await getData(`/contactinfo`)
       setVacancy(data.data.find(item => item.id.toString() === id))
       setSettings(setdata.data[0])
@@ -80,7 +81,7 @@ function VacancyDetailContainer() {
             }
 
             {loading ? <Skeleton variant='rounded' className='mr-[24px]' width={"150px"} height={"30px"} /> :
-              <p data-aos="fade-up" className='text-[20px] my-[15px] font-bold'>{t("salary")}: {vacancy?.salary + " AZN" ?? t("nothing")} </p>
+              <p data-aos="fade-up" className='text-[20px] my-[15px] font-bold'>{t("salary")}: {vacancy?.salary + " AZN"} </p>
             }
             <div className='flex flex-wrap gap-y-[16px] items-center mt-[30px]'>
               {

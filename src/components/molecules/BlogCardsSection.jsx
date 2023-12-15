@@ -56,7 +56,7 @@ function BlogCardsSection({ activeCat, setActiveCat, search }) {
                             <div className='min-h-[50vh] w-full flex-center'>
                                 <h1 className='text-center py-[100px] w-full text-[20px] font-semibold'>{t("not-blogs-cat")}</h1>
                             </div> :
-                            renderBlogs().map(item => <BlogCard blogsCategories={blogsCategories} key={nanoid()} {...item} />)
+                            renderBlogs()?.map(item => <BlogCard blogsCategories={blogsCategories} key={nanoid()} {...item} />)
                 }
 
             </div>

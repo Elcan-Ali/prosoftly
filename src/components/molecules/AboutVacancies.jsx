@@ -31,7 +31,7 @@ function AboutVacancies() {
                         <div className='min-h-[50vh] w-full flex-center'>
                             <h1 className='text-center  py-[100px] w-full text-[20px] font-semibold'>{t("not-vacancy")}</h1>
                         </div> :
-                        data.map(item => <VacancyCard key={nanoid()} {...item} />)
+                        data?.map(item => <VacancyCard key={nanoid()} {...item} />)
                 }
             </div>
         </section>

@@ -69,13 +69,13 @@ function ProjectContainer() {
                             ? Array.from({ length: 3 }).map(_ => <ProjectItemSkeletonComponent key={nanoid()} />)
                             : (!loading && handleProjects()?.length >= 0) ? renderUI() : null
                     }
-                    {
+                    {/* {
                         handleProjects()?.length > 4 && (
                             <div className='flex justify-center pt-[50px] '>
-                                <button className='flex items-center gap-[6px] bg-[#000] text-green px-[16px] py-[8px] rounded-[6px]'>Daha çox layihə <img src={ArrowDown} alt='arrow down' /></button>
+                                <button className='flex items-center gap-[6px] bg-[#000] text-green px-[16px] py-[8px] rounded-[6px]'>{t("more-project")} <img src={ArrowDown} alt='arrow down' /></button>
                             </div>
                         )
-                    }
+                    } */}
                 </div>
             </section>
         </>

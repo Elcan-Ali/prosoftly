@@ -19,7 +19,7 @@ function ProjectsCategoryBtns({ activeCat, setActiveCat, projectsCategories }) {
                 }>
                 {t("all-categories")}
             </li>
-            {projectsCategories.map(item =>
+            {projectsCategories?.map(item =>
             (<li onClick={() => handleClick(item.name.az)}
                 className={` ${activeCat === item.name.az && "active"}  hover:bg-[#afff2c] transition-all text-[14px] category-button font-bold px-[16px] py-[8px] rounded-[6px]`}>
                 {item.name[i18n.language]}

@@ -7,5 +7,8 @@ export const getData = async (endpoint) => {
     }
     catch (err) {
         console.log(err);
+        if (location.pathname !== '/error') {
+            location.pathname = '/error'
+        }
     }
 }

@@ -39,18 +39,14 @@ function ServiceContainer() {
                     {t("our-services-title-text").split("\n").map(item => <p key={nanoid()}>{item}</p>)}
                 </h4>
                 <div className='flex container pt-[60px] flex-wrap gap-[20px]'>
-
-
-
                     {
                         loading ?
                             Array.from({ length: 6 }).map(_ => <ServicesCardSkeleton key={nanoid()} />) :
                             (!loading && services.length === 0) ?
                                 <div className='min-h-[50vh] flex-center w-full'>
                                     <h1 className='text-center py-[100px] w-full text-[20px] font-semibold'>{t("not-services")}</h1>
-                                </div> : services.map(item => <ServiceCard {...item} key={nanoid()} />)
+                                </div> : services?.map(item => <ServiceCard {...item} key={nanoid()} />)
                     }
-
                 </div>
                 <ServicesTechSection />
             </div>

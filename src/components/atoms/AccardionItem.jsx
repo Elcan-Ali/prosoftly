@@ -8,7 +8,7 @@ function AccardionItem({ index, question, answers }) {
     const { t } = useTranslation()
     return (
         <div onClick={() => setActive(!active)} data-aos="fade-right" className=' cursor-pointer'>
-            <div className='flex-between px-[60px] hover:font-semibold  py-[10px] border-b  text-[#000] '>
+            <div className='flex-between px-[60px]  py-[10px] border-b  text-[#000] '>
                 <h3 className={`${active && "font-semibold"}`}>{index + 1}. {t(`${question}`)}</h3>
                 <img className={`h-[40px] w-[40px] shrink-0  rounded-full ${active ? "rotate-[225deg]" : ""} transition-all`} src={icon} alt="icon" />
             </div>

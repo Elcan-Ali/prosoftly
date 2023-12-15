@@ -12,6 +12,10 @@ import { Link } from 'react-router-dom'
 function AboutContainer() {
 
     const { t } = useTranslation()
+    const showVacancies = () => {
+        const element = document.querySelector("#vacancies-section")
+        element.scrollIntoView()
+    }
 
     return (
         <div className='mt-[40px] md:mt-[70px]'>
@@ -28,7 +32,7 @@ function AboutContainer() {
                         {t("about-banner2-text-part1")} <br />
                         {t("about-banner2-text-part2")}
                     </h3>
-                    <a href="#vacancies-section" data-aos="fade-left" className='rounded-[25px] btn2 px-[35px] py-[16px] inline-flex items-center font-medium'>{t("open-see-position")}</a>
+                    <button onClick={showVacancies} data-aos="fade-left" className='rounded-[25px] btn2 px-[35px] py-[16px] inline-flex items-center font-medium'>{t("open-see-position")}</button>
                 </div>
             </div>
             <AboutVacancies />

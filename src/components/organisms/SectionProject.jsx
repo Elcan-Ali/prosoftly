@@ -17,7 +17,7 @@ function SectionProject() {
     const [loading, setLoading] = useState(true)
     const [projectsCategories, setProjectsCategories] = useState([])
     const commonData = projectsCategories?.flatMap(item => item.projects)
-
+    console.log(commonData);
     useEffect(() => {
         (async () => {
             const data = await getData("/projects")
@@ -32,7 +32,11 @@ function SectionProject() {
         <div className='container py-[50px]'>
             {/* {projectItems.slice(0, 4).map(item => <ProjectItemTest key={nanoid()} {...item} />)} */}
             {loading ? Array.from({ length: 3 }).map(_ => <ProjectItemSkeletonComponent key={nanoid()} />) :
-                commonData.map(item => <ProjectItem key={item.id} {...item} />)}
+                (commonData?.length === 0 && !loading) ?
+                    <div className='min-h-[50vh] w-full flex-center'>
+                        <h1 className='text-center py-[100px] w-full text-[20px] font-semibold'>{t("not-projects-cat")}</h1>
+                    </div>
+                    : commonData?.map(item => <ProjectItem key={item.id} {...item} />)}
             <Link data-aos="fade-right" to='/projects' className="flex-center  group text-[24px]"> <p>{t('all-projects')} </p> <img className='pl-[20px] group-hover:pl-[30px] transition-all' src={Arrow} alt='arrow' /></Link>
         </div>
     )

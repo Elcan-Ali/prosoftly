@@ -29,7 +29,7 @@ function AboutOurTeams() {
                             <div className='min-h-[45vh] pb-[5vh] w-full flex-center'>
                                 <h1 className='text-center py-[100px] w-full text-[20px] font-semibold'>{t("not-teammate")}</h1>
                             </div>
-                            : ourTeams.map(item => <TeamMateCard {...item} />)
+                            : ourTeams?.map(item => <TeamMateCard {...item} />)
                 }
             </div>
         </section>
